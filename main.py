@@ -26,13 +26,12 @@ if len(p_age)==2 and p_age=='11' or p_age=='12' or p_age=='13' or p_age=='14':
     years = 'лет'
     print("Ваше имя: "+p_name+ " и вам "+p_age+' '+years)
     
-elif p_age[-1]=='0' or p_age[-1]=='3' or p_age[-1]=='4' or p_age[-1]=='5'\
-   or p_age[-1]=='6' or p_age[-1]=='7' or p_age[-1]=='8' or p_age[-1]=='9':
+elif p_age[-1]=='0' or p_age[-1]=='5' or p_age[-1]=='6' or p_age[-1]=='7' or p_age[-1]=='8' or p_age[-1]=='9':
     years = 'лет'
     print("Ваше имя: "+p_name+ " и вам "+p_age+' '+years)
 
     
-elif p_age[-1]=='2':
+elif p_age[-1]=='2' or p_age[-1]=='3' or p_age[-1]=='4':
     years = 'года'
     print("Ваше имя: "+p_name+ " и вам "+p_age+' '+years)
     
