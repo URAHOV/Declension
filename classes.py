@@ -1,10 +1,11 @@
+from datetime import date
+
 
 class Person:
-
-    def __init__(self, name='', age=None):
+    def __init__(self, name='', birth=None):
         self.name = name
-        self.age = age
+        self.birth = birth
     
     def get_age(self):
-        your_age = str(self.age)
-        return your_age
+        today = date.today()
+        return today.year - self.birth.year - ((today.month, today.day) < (self.birth.month, self.birth.day))
