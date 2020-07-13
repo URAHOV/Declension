@@ -3,7 +3,8 @@
 ## Если число оканчивается на 1, то "год".
 ## Если на 2,3,4, то "года". Если на 0,5,6,7,8,9, то "лет".
 
-from classes import *
+# явное лучше неявного
+from classes import Person
 
 person = Person()
 
@@ -22,20 +23,13 @@ while person.age == None:
 
 p_age = person.get_age()
 
-if len(p_age)==2 and p_age=='11' or p_age=='12' or p_age=='13' or p_age=='14':
-    years = 'лет'
-    print("Ваше имя: "+p_name+ " и вам "+p_age+' '+years)
-    
-elif p_age[-1]=='0' or p_age[-1]=='5' or p_age[-1]=='6' or p_age[-1]=='7' or p_age[-1]=='8' or p_age[-1]=='9':
-    years = 'лет'
-    print("Ваше имя: "+p_name+ " и вам "+p_age+' '+years)
-
-    
-elif p_age[-1]=='2' or p_age[-1]=='3' or p_age[-1]=='4':
-    years = 'года'
-    print("Ваше имя: "+p_name+ " и вам "+p_age+' '+years)
-    
+if len(p_age)==2 and p_age in ['11','12','13','14']:
+    years = 'лет'    
+elif p_age[-1] in ['0','5','6','7','8','9']:
+    years = 'лет' 
+elif p_age[-1] in ['2','3','4']:
+    years = 'года' 
 elif p_age[-1]=='1':
     years = 'год'
-    print("Ваше имя: "+p_name+ " и вам "+p_age+' '+years)
 
+print(f"Ваше имя: {p_name} и вам {p_age} {years}")
