@@ -6,7 +6,7 @@
 from classes import Person ## импорт класса Person из модуля classes.py
 
 person = Person()
-    """ Создание экземпляра класса с полями:
+""" Создание экземпляра класса с полями:
         name
         age
         get_person_data()
